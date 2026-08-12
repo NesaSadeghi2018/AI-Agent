@@ -1,8 +1,10 @@
 from ai_agent.agent import StrategicIntelligenceAgent
+from ai_agent.mock_llm import MockLLM
 
 
 def main():
-    agent = StrategicIntelligenceAgent()
+    llm = MockLLM()
+    agent = StrategicIntelligenceAgent(llm)
 
     question = "What are the main drivers of declining sales?"
 
